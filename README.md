@@ -1,9 +1,13 @@
 # Space-Invaders
 Snake Raiders - a twist on an old classic. My first project from the General Assembly Software Engineering Immersive course.
 
+**First Steps**
+
 I started out by sketching out some initial ideas for what I wanted my game screen to look like. This gave me a sense of proportion and the elements that would be needed within my HTML in particular. I wanted to go for an 8-bit aesthetic primarily because of the sense of nostalgia I associate with both the Indiana Jones films and early computer games.
 
 ![Initial Sketch] (Space-Invaders/Images/SnakeRaidersSketchWF.jpg)
+
+**Initial Pseudocode**
 
 I then wrote out the first stages of my pseudo-code to give me a clear idea of how to start my project off.
 

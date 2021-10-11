@@ -1,5 +1,7 @@
 const grid = document.querySelector('.grid')
 let indyIndex = 217
+let score = 0
+let lives = 3
 
 for (let i = 0; i < 225; i++) {
     const square = document.createElement('div')
@@ -14,12 +16,19 @@ const snakes = [
     62, 63,64,65,66,67,68,69,70,71,72,73
 ]
 
-function place() {
+function placeSnakes() {
     for (let i = 0; i < snakes.length; i++) {
         gridBoxes[snakes[i]].classList.add('snake')
     }
 }
-place()
+placeSnakes()
+
+function removeSnakes() {
+    for (let i = 0; i < snakes.length; i++) {
+        gridBoxes[snakes[i]].classList.remove('snake')
+    }
+}   
+
 
 gridBoxes[indyIndex].classList.add('indy')
 
@@ -36,3 +45,16 @@ function moveIndy (e) {
     gridBoxes[indyIndex].classList.add('indy')
 }
 document.addEventListener('keydown', moveIndy)
+
+// function moveSnakes () {
+//     snakes[0] % 15 === 0
+//     snakes[snakes.length - 1] % 15 === 14
+//     removeSnakes()
+
+//     for (let i = 0; i < snakes.length; i++) {
+//         snakes[i] +=1
+//     }
+//     placeSnakes()
+// }
+
+// setInterval(moveSnakes, 500)

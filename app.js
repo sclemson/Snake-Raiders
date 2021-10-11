@@ -1,4 +1,5 @@
 const grid = document.querySelector('.grid')
+let indyIndex = 217
 
 for (let i = 0; i < 225; i++) {
     const square = document.createElement('div')
@@ -20,4 +21,18 @@ function place() {
 }
 place()
 
-gridBoxes[217].classList.add('indy')
+gridBoxes[indyIndex].classList.add('indy')
+
+function moveIndy (e) {
+    gridBoxes[indyIndex].classList.remove('indy')
+    switch(e.key) {
+        case 'ArrowLeft':
+            if (indyIndex >= 211 && indyIndex <= 224) indyIndex -=1
+            break
+        case 'ArrowRight':
+            if (indyIndex >= 210 && indyIndex <= 223) indyIndex +=1
+            break
+    }
+    gridBoxes[indyIndex].classList.add('indy')
+}
+document.addEventListener('keydown', moveIndy)

@@ -1,13 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    width: 800px;
+    height: 700px;
+    border: solid black 1px;
+    margin: 50px;
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+}
 
 .grid {
-    width: 450px;
-    height: 450px;
+    width: 452px;
+    height: 452px;
     border: solid black 1px;
     display: flex;
     flex-wrap: wrap;
+    margin-left: 50px;
 }
 
 .grid div {
     width: 30px;
     height: 30px;
+    border: lightgray 1px solid;
+}
+
+.heading {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.heading img {
+    width: 450px;
+    margin-left: 50px;
+}
+
+.instructions {
+    position: absolute;
+    width: 180px;
+    height: 300px;
+    top: 170px;
+    right: 80px;
+    font-size: 12px;
+}
+
+.vitals {
+    width: 450px;
+    margin-left: 50px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    font-family: 'Press Start 2P', cursive;
+    width: 80px;
+    height: 40px;
+    margin: 20px 0px 20px 0px;
+    background: rgb(255,18,0);
+    background: linear-gradient(214deg, rgba(255,18,0,1) 0%, rgba(255,106,0,1) 50%, rgba(255,252,0,1) 100%);
+}
+
+.snake {
+    background-color: lightgreen;
+}
+
+.indy {
+    background-color: sienna;
 }

@@ -1,4 +1,5 @@
 const grid = document.querySelector('.grid')
+const scoreSpan = document.getElementById('score')
 let indyIndex = 217
 let score = 0
 let lives = 3
@@ -91,6 +92,7 @@ const attack = setInterval(() => {
             if (box.classList.contains('snake')) {
                 gridBoxes[index].classList.remove('whip')
                 gridBoxes[index].classList.remove('snake')
+                score += 10
             } else if (index < 14) {
                 gridBoxes[index].classList.remove('whip')
             } else {
@@ -98,8 +100,10 @@ const attack = setInterval(() => {
             gridBoxes[index].classList.remove('whip')
             }
         }
+        let newScore = score
+        scoreSpan.innerHTML = ` ${newScore}`
     })
-}, 500)
+}, 100)
 
 
 

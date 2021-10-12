@@ -72,3 +72,8 @@ button {
 .indy {
     background-color: sienna;
 }
+
+.whip {
+    background-color: yellow;
+    z-index: -1;
+}

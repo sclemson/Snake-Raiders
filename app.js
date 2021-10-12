@@ -2,6 +2,7 @@ const grid = document.querySelector('.grid')
 let indyIndex = 217
 let score = 0
 let lives = 3
+let whipIndex = indyIndex
 const start = document.querySelector('button')
 
 for (let i = 0; i < 225; i++) {
@@ -28,8 +29,8 @@ gridBoxes[indyIndex].classList.add('indy')
 
 function startGame() {
 
-const startAudio = document.querySelector('audio')
-startAudio.play()
+// const startAudio = document.querySelector('audio')
+// startAudio.play()
 
 function placeSnakes() {
     for (let i = 0; i < snakes.length; i++) {
@@ -73,19 +74,65 @@ function moveSnakes () {
 setInterval(moveSnakes, 500)
 
 function whip(e) {
-    let whipIndex = indyIndex
-    function moveWhip() {
-        gridBoxes[whipIndex].classList.remove('whip')
+    console.log(e.key)
+    if (e.key === 'z') {
+        let whipIndex = indyIndex
         whipIndex -= 15
         gridBoxes[whipIndex].classList.add('whip')
     }
-    switch(e.key) {
-        case 'z':
-        setInterval(moveWhip, 50)
-    }
 }
-// document.addEventListener('keydown', whip)
+ 
+document.addEventListener('keydown', whip)
+
+const attack = setInterval(() => {
+    gridBoxes.map(box => {
+        if (box.classList.contains('whip')) {
+            let index = gridBoxes.indexOf(box)
+            gridBoxes[index - 15].classList.add('whip')
+            gridBoxes[index].classList.remove('whip')
+        }
+    })
+}, 1000)
+
+
+
+// function whip(e) {
+//     // if ('keydown' === z) {
+//     function moveWhip() {
+//         let whipIndex = indyIndex
+//         console.log(whipIndex)
+//         gridBoxes[whipIndex].classList.remove('whip')
+//         whipIndex -= 15
+//         gridBoxes[whipIndex].classList.add('whip')
+//     }
+//     switch(e.key) {
+//         case 'z':
+//         setInterval(moveWhip, 50)
+//     }
+// } 
+
+
+
+// function whip() {
+//     let whipIndex = indyIndex;
+//     function moveWhip() {
+//         gridBoxes[whipIndex].classList.remove("whip")
+//         whipIndex -= 15
+//         if (whipIndex < 0) {
+//             clearInterval(whipId)
+//         }
+//         gridBoxes[whipIndex].classList.add("whip")
+//     }
+//     let whipId = setInterval(moveWhip, 100);
+//     }
+//     document.addEventListener('keydown', whip(e) {
+//         if (e.key === 32) {
+//             whip()
+//         }
+
+// 
+
 }
 
 start.addEventListener("click", startGame)
-document.addEventListener('keydown', whip)
+

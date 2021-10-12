@@ -2,6 +2,7 @@ const grid = document.querySelector('.grid')
 let indyIndex = 217
 let score = 0
 let lives = 3
+const start = document.querySelector('button')
 
 for (let i = 0; i < 225; i++) {
     const square = document.createElement('div')
@@ -13,8 +14,22 @@ const gridBoxes = Array.from(document.querySelectorAll('.grid div'))
 const snakes = [
     2,3,4,5,6,7,8,9,10,11,12,13,
     31,32,33,34,35,36,37,38,39,40,41,42,
-    62, 63,64,65,66,67,68,69,70,71,72,73
+    62,63,64,65,66,67,68,69,70,71,72,73
 ]
+
+function placeSnakes() {
+    for (let i = 0; i < snakes.length; i++) {
+        gridBoxes[snakes[i]].classList.add('snake')
+    }
+}
+placeSnakes()
+
+gridBoxes[indyIndex].classList.add('indy')
+
+function startGame() {
+
+const startAudio = document.querySelector('audio')
+startAudio.play()
 
 function placeSnakes() {
     for (let i = 0; i < snakes.length; i++) {
@@ -28,7 +43,6 @@ function removeSnakes() {
         gridBoxes[snakes[i]].classList.remove('snake')
     }
 }   
-
 
 gridBoxes[indyIndex].classList.add('indy')
 
@@ -46,15 +60,32 @@ function moveIndy (e) {
 }
 document.addEventListener('keydown', moveIndy)
 
-// function moveSnakes () {
-//     snakes[0] % 15 === 0
-//     snakes[snakes.length - 1] % 15 === 14
-//     removeSnakes()
+function moveSnakes () {
+    snakes[0] % 15 === 0
+    snakes[snakes.length - 1] % 15 === 14
+    removeSnakes()
 
-//     for (let i = 0; i < snakes.length; i++) {
-//         snakes[i] +=1
-//     }
-//     placeSnakes()
-// }
+    for (let i = 0; i < snakes.length; i++) {
+        snakes[i] +=1
+    }
+    placeSnakes()
+}
+setInterval(moveSnakes, 500)
 
-// setInterval(moveSnakes, 500)
+function whip(e) {
+    let whipIndex = indyIndex
+    function moveWhip() {
+        gridBoxes[whipIndex].classList.remove('whip')
+        whipIndex -= 15
+        gridBoxes[whipIndex].classList.add('whip')
+    }
+    switch(e.key) {
+        case 'z':
+        setInterval(moveWhip, 50)
+    }
+}
+// document.addEventListener('keydown', whip)
+}
+
+start.addEventListener("click", startGame)
+document.addEventListener('keydown', whip)

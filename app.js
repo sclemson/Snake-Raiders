@@ -88,11 +88,19 @@ const attack = setInterval(() => {
     gridBoxes.map(box => {
         if (box.classList.contains('whip')) {
             let index = gridBoxes.indexOf(box)
+            if (box.classList.contains('snake')) {
+                gridBoxes[index].classList.remove('whip')
+                gridBoxes[index].classList.remove('snake')
+            } else if (index < 14) {
+                gridBoxes[index].classList.remove('whip')
+            } else {
             gridBoxes[index - 15].classList.add('whip')
             gridBoxes[index].classList.remove('whip')
+            }
         }
     })
-}, 1000)
+}, 500)
+
 
 
 

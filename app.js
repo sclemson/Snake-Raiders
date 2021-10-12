@@ -1,5 +1,6 @@
 const grid = document.querySelector('.grid')
 const scoreSpan = document.getElementById('score')
+const livesSpan = document.getElementById('lives')
 let indyIndex = 217
 let score = 0
 let lives = 3

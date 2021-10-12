@@ -21,6 +21,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     margin-left: 50px;
+    background-color: wheat;
 }
 
 .grid div {
@@ -66,16 +67,23 @@ button {
 }
 
 .snake {
-    background-color: lightgreen;
+    background-image: url(./Images/Snake.svg);
+    background-size: cover;
+    /* background-color: lightgreen; */
 }
 
 .indy {
-    /* background-image: url(./Images/rect488.png);
-    background-size: cover; */
-    background-color: sienna;
+    background-image: url(./Images/Indy.svg);
+    background-size: cover;
+    /* background-color: sienna; */
 }
 
 .whip {
+    /* background-image: url(); */
+    /* background-size:  */
     background-color: yellow;
-    z-index: -1;
+}
+
+.arrow {
+    font-size: 22px;
 }

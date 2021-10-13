@@ -7,32 +7,38 @@
 main {
     width: 800px;
     height: 700px;
-    border: solid black 1px;
+    border: solid gray 1px;
     margin: 50px;
     position: relative;
     font-family: 'Press Start 2P', cursive;
     font-size: 16px;
+    background-color: wheat;
+}
+
+.heading {
+    margin-top: 30px;
+    margin-bottom: 0px;
+    margin-left: -20px;
+    z-index: 0;
 }
 
 .grid {
     width: 452px;
     height: 452px;
-    border: solid black 1px;
+    border: solid gray 1px;
     display: flex;
     flex-wrap: wrap;
     margin-left: 50px;
-    background-color: wheat;
+    background-image: url(./Images/Desert.jpg);
+    background-size:cover;
+    z-index: 0;
 }
 
 .grid div {
     width: 30px;
     height: 30px;
     border: lightgray 1px solid;
-}
-
-.heading {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    z-index: 0;
 }
 
 .heading img {
@@ -52,7 +58,7 @@ main {
 .vitals {
     width: 450px;
     margin-left: 50px;
-    margin-top: 15px;
+    margin-top: 10px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -79,11 +85,17 @@ button {
 }
 
 .whip {
-    /* background-image: url(); */
-    /* background-size:  */
-    background-color: yellow;
+    background-image: url(./Images/Whip.svg); 
+    background-size: cover;
+    opacity: 30%;
+    /* background-color: yellow; */
 }
 
 .arrow {
     font-size: 22px;
 }
+
+/* .blankSq {
+    background-color: wheat;
+    z-index: 0;
+} */

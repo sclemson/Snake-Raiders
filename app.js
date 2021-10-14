@@ -4,6 +4,8 @@ const livesSpan = document.getElementById("lives");
 // const level = document.querySelector('.level')
 const win = document.querySelector('.winScreen')
 let indyIndex = 217;
+let direction = 1;
+let goingRight = true;
 let score = 0;
 let lives = 3;
 let whipIndex = indyIndex;
@@ -18,10 +20,19 @@ for (let i = 0; i < 225; i++) {
 
 const gridBoxes = Array.from(document.querySelectorAll(".grid div"));
 
+// const snakes = [
+//   2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 31, 32, 33, 34, 35, 36, 37, 38, 39,
+//   40, 41, 42, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73,
+// ];
+
+// const snakes = [
+//     1, 3, 5, 7, 9, 11, 13, 32, 34, 36, 38,
+//     40, 42, 61, 63, 65, 67, 69, 71, 73
+//   ];
+
 const snakes = [
-  2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 31, 32, 33, 34, 35, 36, 37, 38, 39,
-  40, 41, 42, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73,
-];
+    1, 3, 5, 7, 9, 11, 13, 17, 19, 21, 23, 25, 27, 31, 33, 35, 37, 39, 41, 43
+]
 
 function placeSnakes() {
   for (let i = 0; i < snakes.length; i++) {
@@ -64,19 +75,50 @@ function startGame() {
   document.addEventListener("keydown", moveIndy);
 
   function moveSnakes() {
-    snakes[0] % 15 === 0;
-    snakes[snakes.length - 1] % 15 === 14;
-    removeSnakes();
+    //   const leftEdge = snakes => snakes % 15 === 0
+    //   const rightEdge = snakes => snakes[snakes.length - 1] % 15 === 14
+    //   removeSnakes()
+    const leftEdge = snakes[0] % 15 === 0
+    const rightEdge = snakes[snakes.length - 1] % 15 === 14
+    removeSnakes()
+
+    // if (snakes.some(rightEdge) && goingRight) {
+    //     snakes[i] += 15 
+    //     direction = -1
+    //     goingRight = false
+    // }
+
+    // if (snakes.some(leftEdge) && !goingRight) {
+    //     snakes[i] += 15 
+    //       direction = 1
+    //       goingRight = true
+    // }
+
+    if (rightEdge && goingRight) {
+        for (let i = 0; i < snakes.length; i++) {
+          snakes[i] += 15 
+          direction = -1
+          goingRight = false
+        }
+      }
+
+    if(leftEdge && !goingRight) {
+        for (let i = 0; i < snakes.length; i++) {
+          snakes[i] += 15 
+          direction = 1
+          goingRight = true
+        }
+      }
 
     for (let i = 0; i < snakes.length; i++) {
-      snakes[i] += 1;
+      snakes[i] += direction;
     }
     if (snakes[snakes.length - 1] > 209) {
         alert("Game Over")
     }
     placeSnakes();
   }
-  setInterval(moveSnakes, 400);
+  setInterval(moveSnakes, 900);
 
   function handleKeydown(e) {
       console.log(e.key)
@@ -114,7 +156,7 @@ function startGame() {
       }
       let newScore = score;
       scoreSpan.innerHTML = ` ${newScore}`;
-      if (newScore === 360) {
+      if (newScore === 200) {
           alert("You win")
         // win.style.display = 'flex';
         // grid.style.display = 'none';
@@ -125,7 +167,7 @@ function startGame() {
 
   function snakeAttack() {
     // let venomId = setInterval(moveVenom, 100);
-    if (Math.random() > 0.7) {
+    if (Math.random() > 0.8) {
         return
     }
     let randomSnakeIndex = snakes[Math.floor(Math.random() * snakes.length)];

@@ -40,6 +40,33 @@ main {
     z-index: 0;
 }
 
+.gameOver {
+    width: 452px;
+    height: 452px;
+    border: solid gray 1px;
+    border-radius: 5px;
+    display: none;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    background-image: url(./Images/Desert.jpg);
+    background-size:cover;
+    z-index: 0;
+}
+
+.newScreen {
+    text-align: center;
+    margin: auto;
+}
+
+#playAgain {
+    font-family: 'Press Start 2P', cursive;
+    width: 100px;
+    height: 50px;
+    margin: 20px 0px 20px 0px;
+    background: rgb(255,18,0);
+    background: linear-gradient(214deg, rgba(255,18,0,1) 0%, rgba(255,106,0,1) 50%, rgba(255,252,0,1) 100%);
+}
+
 .grid div {
     width: 30px;
     height: 30px;
@@ -97,6 +124,10 @@ button {
     /* background-color: yellow; */
 }
 
+.whipped {
+    background-color: blue;
+}
+
 .arrow {
     font-size: 22px;
 }
@@ -105,3 +136,9 @@ button {
     background-color: wheat;
     z-index: 0;
 } */
+
+.venom {
+    background-color: magenta;
+    background-size: cover;
+}
+

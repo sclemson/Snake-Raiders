@@ -71,9 +71,12 @@ function startGame() {
     for (let i = 0; i < snakes.length; i++) {
       snakes[i] += 1;
     }
+    if (snakes[snakes.length - 1] > 209) {
+        alert("Game Over")
+    }
     placeSnakes();
   }
-  setInterval(moveSnakes, 500);
+  setInterval(moveSnakes, 400);
 
   function handleKeydown(e) {
       console.log(e.key)
@@ -121,12 +124,13 @@ function startGame() {
   document.addEventListener("keydown", handleKeydown);
 
   function snakeAttack() {
-    let venomId = setInterval(moveVenom, 100);
+    // let venomId = setInterval(moveVenom, 100);
     if (Math.random() > 0.7) {
         return
     }
     let randomSnakeIndex = snakes[Math.floor(Math.random() * snakes.length)];
     let venomIndex = randomSnakeIndex;
+    let venomId = setInterval(moveVenom, 100);
     
     function moveVenom() {
         gridBoxes[venomIndex].classList.remove("venom");
@@ -135,8 +139,6 @@ function startGame() {
             clearInterval(venomId)
             return
         }
-    //   gridBoxes[venomIndex].classList.remove("venom");
-    //   venomIndex += 15;
       gridBoxes[venomIndex].classList.add("venom");
       if (gridBoxes[venomIndex].classList.contains("indy")) {
         gridBoxes[venomIndex].classList.remove("venom");
@@ -154,7 +156,6 @@ function startGame() {
       }
 
     }
-    // venomId = setInterval(moveVenom, 100);
   }
 }
 

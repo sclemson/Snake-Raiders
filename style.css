@@ -40,7 +40,7 @@ main {
     z-index: 0;
 }
 
-.gameOver {
+.winScreen {
     width: 452px;
     height: 452px;
     border: solid gray 1px;
@@ -51,6 +51,13 @@ main {
     background-image: url(./Images/Desert.jpg);
     background-size:cover;
     z-index: 0;
+}
+
+#idol {
+    width: 20%;
+    height: 20%;
+    margin-left: -20px;
+    justify-content: center;
 }
 
 .newScreen {

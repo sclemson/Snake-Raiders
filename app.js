@@ -2,6 +2,7 @@ const grid = document.querySelector(".grid");
 const scoreSpan = document.getElementById("score");
 const livesSpan = document.getElementById("lives");
 // const level = document.querySelector('.level')
+const win = document.querySelector('.winScreen')
 let indyIndex = 217;
 let score = 0;
 let lives = 3;
@@ -111,28 +112,31 @@ function startGame() {
       let newScore = score;
       scoreSpan.innerHTML = ` ${newScore}`;
       if (newScore === 360) {
-        // alert("I am an alert box!");
-        // level.classList.remove('hidden');
+          alert("You win")
+        // win.style.display = 'flex';
+        // grid.style.display = 'none';
       }
     }
   }
   document.addEventListener("keydown", handleKeydown);
 
   function snakeAttack() {
+    let venomId = setInterval(moveVenom, 100);
     if (Math.random() > 0.7) {
         return
     }
-    let venomId;
     let randomSnakeIndex = snakes[Math.floor(Math.random() * snakes.length)];
     let venomIndex = randomSnakeIndex;
-
+    
     function moveVenom() {
+        gridBoxes[venomIndex].classList.remove("venom");
+        venomIndex += 15;
         if (venomIndex > 224) {
             clearInterval(venomId)
             return
         }
-      gridBoxes[venomIndex].classList.remove("venom");
-      venomIndex += 15;
+    //   gridBoxes[venomIndex].classList.remove("venom");
+    //   venomIndex += 15;
       gridBoxes[venomIndex].classList.add("venom");
       if (gridBoxes[venomIndex].classList.contains("indy")) {
         gridBoxes[venomIndex].classList.remove("venom");
@@ -142,11 +146,15 @@ function startGame() {
         setTimeout(() => gridBoxes[venomIndex].classList.remove("death"), 300);
         clearInterval(venomId);
         lives --
-      }
-      let newLives = lives;
+        let newLives = lives;
         livesSpan.innerHTML = ` ${newLives}`;
+        if (newLives === 0) {
+            alert("Game over")
+        }
+      }
+
     }
-    venomId = setInterval(moveVenom, 100);
+    // venomId = setInterval(moveVenom, 100);
   }
 }
 

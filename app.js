@@ -20,16 +20,6 @@ for (let i = 0; i < 225; i++) {
 
 const gridBoxes = Array.from(document.querySelectorAll(".grid div"));
 
-// const snakes = [
-//   2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 31, 32, 33, 34, 35, 36, 37, 38, 39,
-//   40, 41, 42, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73,
-// ];
-
-// const snakes = [
-//     1, 3, 5, 7, 9, 11, 13, 32, 34, 36, 38,
-//     40, 42, 61, 63, 65, 67, 69, 71, 73
-//   ];
-
 const snakes = [
     1, 3, 5, 7, 9, 11, 13, 17, 19, 21, 23, 25, 27, 31, 33, 35, 37, 39, 41, 43
 ]
@@ -52,7 +42,6 @@ function removeSnakes() {
 gridBoxes[indyIndex].classList.add("indy");
 
 function startGame() {
-    console.log('startGame')
 
   const startAudio = document.querySelector('#snakesAudio')
   startAudio.play()
@@ -147,10 +136,10 @@ function startGame() {
       let newScore = score;
       scoreSpan.innerHTML = ` ${newScore}`;
       if (newScore === 200) {
-          win.style.display = 'flex'
-          grid.style.display = 'none'
-          const winAudio = document.querySelector('#win')
-            winAudio.play()
+        win.style.display = 'flex'
+        grid.style.display = 'none'
+        const winAudio = document.querySelector('#win')
+        winAudio.play()
       }
     }
   }
@@ -194,5 +183,11 @@ function startGame() {
   }
 }
 
+function reload () {
+    location.reload();
+}
+
 start.addEventListener("click", startGame);
+playAgain.addEventListener("click", reload);
+
 

@@ -141,20 +141,17 @@ button {
 .snake {
     background-image: url(./Images/Snake.svg);
     background-size: cover;
-    /* background-color: lightgreen; */
 }
 
 .indy {
     background-image: url(./Images/Indy.svg);
     background-size: cover;
-    /* background-color: sienna; */
 }
 
 .whip {
     background-image: url(./Images/Whip.svg); 
     background-size: cover;
     opacity: 30%;
-    /* background-color: yellow; */
 }
 
 .whipped {
@@ -165,14 +162,7 @@ button {
     font-size: 22px;
 }
 
-/* .blankSq {
-    background-color: wheat;
-    z-index: 0;
-} */
-
 .venom {
     background-image: url(./Images/Venom2.png)
-    /* background-color: magenta;
-    background-size: cover; */
 }
 

@@ -54,7 +54,7 @@ gridBoxes[indyIndex].classList.add("indy");
 function startGame() {
     console.log('startGame')
 
-  const startAudio = document.querySelector('audio')
+  const startAudio = document.querySelector('#snakesAudio')
   startAudio.play()
 
   placeSnakes();
@@ -103,6 +103,8 @@ function startGame() {
     if (snakes[snakes.length - 1] > 209) {
         gameOver.style.display = 'flex'
         grid.style.display = 'none'
+        const endAudio = document.querySelector('#lose')
+        endAudio.play()
     }
     placeSnakes();
   }
@@ -147,6 +149,8 @@ function startGame() {
       if (newScore === 200) {
           win.style.display = 'flex'
           grid.style.display = 'none'
+          const winAudio = document.querySelector('#win')
+            winAudio.play()
       }
     }
   }
@@ -181,6 +185,8 @@ function startGame() {
         if (newLives === 0) {
             gameOver.style.display = 'flex'
             grid.style.display = 'none'
+            const endAudio = document.querySelector('#lose')
+            endAudio.play()
         }
       }
 

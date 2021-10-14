@@ -5,7 +5,9 @@
 }
 
 body {
-    background-color: lightyellow;
+    background-image: url(./Images/WebBack2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 main {
@@ -17,12 +19,12 @@ main {
     position: relative;
     font-family: 'Press Start 2P', cursive;
     font-size: 16px;
-    background-color: wheat;
+    background-image: url(./Images/Indy\ backdrop\ Op4.png)
 }
 
 .heading {
     margin-top: 15px;
-    margin-bottom: -5px;
+    margin-bottom: -40px;
     margin-left: -20px;
     z-index: 0;
 }
@@ -114,15 +116,15 @@ h2 {
     position: absolute;
     width: 180px;
     height: 300px;
-    top: 170px;
-    right: 80px;
+    top: 140px;
+    right: 60px;
     font-size: 12px;
 }
 
 .vitals {
     width: 450px;
     margin-left: 50px;
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-evenly;
 }

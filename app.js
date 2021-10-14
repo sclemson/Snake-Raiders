@@ -135,7 +135,7 @@ function startGame() {
 //   }
 //   setInterval(moveSnakes, 1000);
 
-let snakeId = setInterval(moveSnakes, 800);
+let snakeId = setInterval(moveSnakes, 700);
 
   function handleKeydown(e) {
       console.log(e.key)

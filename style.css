@@ -125,7 +125,7 @@ button {
 }
 
 .whipped {
-    background-color: blue;
+    background-image: url(./Images/smoke\ gif.gif);
 }
 
 .arrow {
@@ -138,7 +138,8 @@ button {
 } */
 
 .venom {
-    background-color: magenta;
-    background-size: cover;
+    background-image: url(./Images/Venom2.png)
+    /* background-color: magenta;
+    background-size: cover; */
 }
 

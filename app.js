@@ -99,7 +99,7 @@ function startGame() {
         gridBoxes[whipIndex].classList.remove("snake");
         gridBoxes[whipIndex].classList.add("whipped");
 
-        setTimeout(() => gridBoxes[whipIndex].classList.remove("whipped"), 300);
+        setTimeout(() => gridBoxes[whipIndex].classList.remove("whipped"), 1000);
         clearInterval(whipId);
 
         const whipSnake = snakes.indexOf(whipIndex);
@@ -141,118 +141,13 @@ function startGame() {
 
         setTimeout(() => gridBoxes[venomIndex].classList.remove("death"), 300);
         clearInterval(venomId);
-
-        // const whipSnake = snakes.indexOf(whipIndex)
-
-        // whippedSnakes.push(whipSnake)
-        // console.log('pushed into a new array',whipSnake)
-        // score += 10
-        //   }
-        //   let newScore = score
-        //   scoreSpan.innerHTML = ` ${newScore}`
-        //   if (newScore === 360) {
-        // alert("I am an alert box!");
-        // level.classList.remove('hidden');
+        lives --
       }
+      let newLives = lives;
+        livesSpan.innerHTML = ` ${newLives}`;
     }
     venomId = setInterval(moveVenom, 100);
   }
-
-  //   function snakeShoot() {
-  //       let randomSnake = snakes[Math.floor(Math.random() * snakes.length)]
-  //       if (gridBoxes[randomSnake]) {
-  //        (gridBoxes[randomSnake].classList.add('venom'))
-  //         }
-  //   const snakeShootInterval = setInterval(() => {
-  //     gridBoxes[randomSnake].classList.remove('venom')
-  //     if(!gridBoxes[randomSnake + 15]) {
-  //       clearInterval(snakeShootInterval)
-  //       return false
-  //     }
-  //     randomSnake += 15
-  //     if(gridBoxes[randomSnake]) {
-  //         gridBoxes[randomSnake].classlist.add('venom')
-  //     }
-  //     if([randomSnake].classList.contains('indy') && lives > 0) {
-  //         lives --
-  //         livesSpan.innerText = lives
-  //         gridBoxes[randomSnake].classList.remove('venom')
-  //         gridBoxes[indyIndex].classList.remove('indy')
-  //         // gridboxes[randomSnake].classList.add('lifeLost')
-  //         // explosion.play()
-  //         setTimeout(() => {
-  //         //   gridBoxes[randomSnake].classList.remove('lifeLost')
-  //           gridBoxes[indyIndex].classList.add('indy')
-  //         }, 500)
-  //         clearInterval(snakeShootInterval)
-  //       }
-  //     }, 100)
-
-  // old attack functions
-  // document.addEventListener('keydown', whip)
-  // let index
-  // const attack = setInterval(() => {
-  //     gridBoxes.map(box => {
-  //         if (box.classList.contains('whip')) {
-  //             index = gridBoxes.indexOf(box)
-  //             console.log(index)
-  //             if (box.classList.contains('snake')) {
-  //                 gridBoxes[index].classList.remove('whip')
-  //                 gridBoxes[index].classList.remove('snake')
-  //                 gridBoxes[index].classList.add('blankSq')
-  //                 setTimeout(() => gridBoxes[index].classList.remove('blankSq'), 300)
-  //                 clearInterval('whip')
-  //                 // whippedSnakes = snakes.indexOf('index')
-  //                 // whippedSnakes.push(whippedSnakes)
-  //                 whippedSnakes.push(snakes.indexOf(index))
-  //                 }
-  //                 score += 10
-  //                 let newScore = score
-  //                 scoreSpan.innerHTML = ` ${newScore}`
-  //             } else if (index < 14) {
-  //                 gridBoxes[index].classList.remove('whip')
-  //             } else {
-  //             gridBoxes[index - 15].classList.add('whip')
-  //             gridBoxes[index].classList.remove('whip')
-  //             }
-  //         }
-  //         // let newScore = score
-  //         // scoreSpan.innerHTML = ` ${newScore}`
-  // )}, 100)
-
-  // function whip(e) {
-  //     // if ('keydown' === z) {
-  //     function moveWhip() {
-  //         let whipIndex = indyIndex
-  //         console.log(whipIndex)
-  //         gridBoxes[whipIndex].classList.remove('whip')
-  //         whipIndex -= 15
-  //         gridBoxes[whipIndex].classList.add('whip')
-  //     }
-  //     switch(e.key) {
-  //         case 'z':
-  //         setInterval(moveWhip, 50)
-  //     }
-  // }
-
-  // function whip() {
-  //     let whipIndex = indyIndex;
-  //     function moveWhip() {
-  //         gridBoxes[whipIndex].classList.remove("whip")
-  //         whipIndex -= 15
-  //         if (whipIndex < 0) {
-  //             clearInterval(whipId)
-  //         }
-  //         gridBoxes[whipIndex].classList.add("whip")
-  //     }
-  //     let whipId = setInterval(moveWhip, 100);
-  //     }
-  //     document.addEventListener('keydown', whip(e) {
-  //         if (e.key === 32) {
-  //             whip()
-  //         }
-
-  //
 }
 
 start.addEventListener("click", startGame);

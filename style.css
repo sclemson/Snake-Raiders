@@ -4,10 +4,15 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: lightyellow;
+}
+
 main {
     width: 800px;
     height: 700px;
     border: solid gray 1px;
+    border-radius: 5px;
     margin: 50px;
     position: relative;
     font-family: 'Press Start 2P', cursive;
@@ -16,8 +21,8 @@ main {
 }
 
 .heading {
-    margin-top: 30px;
-    margin-bottom: 0px;
+    margin-top: 15px;
+    margin-bottom: -5px;
     margin-left: -20px;
     z-index: 0;
 }
@@ -26,6 +31,7 @@ main {
     width: 452px;
     height: 452px;
     border: solid gray 1px;
+    border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
     margin-left: 50px;
@@ -37,7 +43,7 @@ main {
 .grid div {
     width: 30px;
     height: 30px;
-    border: lightgray 1px solid;
+    /* border: lightgray 1px solid; */
     z-index: 0;
 }
 

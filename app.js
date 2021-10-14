@@ -1,6 +1,7 @@
 const grid = document.querySelector('.grid')
 const scoreSpan = document.getElementById('score')
 const livesSpan = document.getElementById('lives')
+// const level = document.querySelector('.level')
 let indyIndex = 217
 let score = 0
 let lives = 3
@@ -91,14 +92,14 @@ function moveSnakes () {
 }
 setInterval(moveSnakes, 500)
 
-function whip(e) {
-    console.log(e.key)
-    if (e.key === 'z') {
-        let whipIndex = indyIndex
-        whipIndex -= 15
-        gridBoxes[whipIndex].classList.add('whip')
-    }
-}
+// function whip(e) {
+//     console.log(e.key)
+//     if (e.key === 'z') {
+//         let whipIndex = indyIndex
+//         whipIndex -= 15
+//         gridBoxes[whipIndex].classList.add('whip')
+//     }
+// }
 
 function attack (e) {
     let whipId
@@ -124,6 +125,10 @@ function attack (e) {
       }
       let newScore = score
       scoreSpan.innerHTML = ` ${newScore}`
+      if (newScore === 360) {
+        // alert("I am an alert box!");
+        // level.classList.remove('hidden');
+    }
     }
     if( e.key === 'z' ){
       whipId =setInterval(moveWhip, 100)

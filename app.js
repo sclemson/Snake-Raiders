@@ -135,7 +135,7 @@ function startGame() {
 //   }
 //   setInterval(moveSnakes, 1000);
 
-let snakeId = setInterval(moveSnakes, 1000);
+let snakeId = setInterval(moveSnakes, 800);
 
   function handleKeydown(e) {
       console.log(e.key)
@@ -185,7 +185,7 @@ let snakeId = setInterval(moveSnakes, 1000);
   document.addEventListener("keydown", handleKeydown);
 
   function snakeAttack() {
-    if (Math.random() > 0.7) {
+    if (Math.random() > 0.6) {
         return
     }
     let randomSnakeIndex = snakes[Math.floor(Math.random() * snakes.length)];
@@ -204,6 +204,8 @@ let snakeId = setInterval(moveSnakes, 1000);
         gridBoxes[venomIndex].classList.remove("venom");
         gridBoxes[venomIndex].classList.remove("indy");
         gridBoxes[whipIndex].classList.add("death");
+        const painAudio = document.querySelector('#pain')
+            painAudio.play()
 
         setTimeout(() => gridBoxes[venomIndex].classList.remove("death"), 300);
         clearInterval(venomId);

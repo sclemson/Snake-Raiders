@@ -45,6 +45,10 @@ From the outset, I had known exactly what I wanted my game to look like. Across 
 Finally, I decided to add audio to try and inject a sense of humour into the game, incorporating the _Indiana Jones_ theme into the win screen and Indy’s famous ‘Snakes, why did it have to be snakes?’ quote into the start of the game.
 
 ## Featured Code
+The **startGame** function incorporated much of the functionality of the game with several key aspects of the game contained in it. Below, you can see the commands for audio at the start of the game and the code that controls Indy:
+
+![Start Game](https://github.com/sclemson/Snake-Raiders/blob/main/Images/Start%20Game.png)
+
 One of the key pieces of code I worked on over the course of the week was the **snakeAttack** function which encapsulates many of the key ideas that I have focussed on above. I chose to highlight this code in particular as, in many ways, this was the most complex piece of code in Snake Raiders as it incorporated the adding and removing of classes as well as the use of **Math** and **setInterval** to manipulate the difficulty of the game.
 
 ![snakeAttack](https://github.com/sclemson/Snake-Raiders/blob/main/Images/snakeAttack.png)

@@ -39,7 +39,7 @@ From the outset, I had known exactly what I wanted my game to look like. Across 
 
 <p float="left">
   <img src="https://github.com/sclemson/Snake-Raiders/blob/main/Images/Game%20Screen.png" width="500" />
-  <img src="https://github.com/sclemson/Snake-Raiders/blob/main/Images/Win%20Screen.png" width="500" height="450" /> 
+  <img src="https://github.com/sclemson/Snake-Raiders/blob/main/Images/Win%20Screen.png" width="500" height="440" /> 
 </p>
 
 

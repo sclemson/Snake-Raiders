@@ -39,7 +39,7 @@ From the outset, I had known exactly what I wanted my game to look like. Across 
 
 <p float="left">
   <img src="https://github.com/sclemson/Snake-Raiders/blob/main/Images/Game%20Screen.png" width="48%"  />
-  <img src="https://github.com/sclemson/Snake-Raiders/blob/main/Images/Win%20Screen.png" width="48%" /> 
+  <img src="https://github.com/sclemson/Snake-Raiders/blob/main/Images/Win%20Screen.png" width="49%" /> 
 </p>
 
 Finally, I decided to add audio to try and inject a sense of humour into the game, incorporating the _Indiana Jones_ theme into the win screen and Indy’s famous ‘Snakes, why did it have to be snakes?’ quote into the start of the game.

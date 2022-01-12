@@ -37,7 +37,13 @@ The final pieces of game functionality were the scoring and lives systems. In or
 ## Day 7
 From the outset, I had known exactly what I wanted my game to look like. Across the breadth of the project, I had spent downtime in the evenings getting sprites, gifs, and backdrops ready so that I would be able to ‘slot’ these in at the end of the week. I used multiple tools to create these, utilising **Adobe Photoshop** in particular to generate 8-bit graphics, and Indiana Jones imagery. The look of the game came together relatively quickly as a result of this work and my key job on the final day became the ‘win’ screen that appeared, awarding Indy the idol. I built this by creating a separate class (called **winScreen**) which was the same size as the game grid, but only appeared once all of the snakes had been killed. The end result of the game screen and win screen looked like this:
 
-![Game Screen](https://github.com/sclemson/Snake-Raiders/blob/main/Images/Game%20Screen.png | width=80)![Win Screen](https://github.com/sclemson/Snake-Raiders/blob/main/Images/Win%20Screen.png | width=80)
+<p float="left">
+  <img src="https://github.com/sclemson/Snake-Raiders/blob/main/Images/Game%20Screen.png" width="100" />
+  <img src="https://github.com/sclemson/Snake-Raiders/blob/main/Images/Win%20Screen.png" width="100" /> 
+</p>
+
+
+![Game Screen](https://github.com/sclemson/Snake-Raiders/blob/main/Images/Game%20Screen.png)![Win Screen](https://github.com/sclemson/Snake-Raiders/blob/main/Images/Win%20Screen.png)
 
 Finally, I decided to add audio to try and inject a sense of humour into the game, incorporating the _Indiana Jones_ theme into the win screen and Indy’s famous ‘Snakes, why did it have to be snakes?’ quote into the start of the game.
 

@@ -1,5 +1,9 @@
-# Space-Invaders
-Snake Raiders - a twist on an old classic. My first project from the General Assembly Software Engineering Immersive course.
+# Snake Raiders
+
+##Project Overview
+Snake Raiders was designed as a twist on an old classic. The grid-based game was my first project on the General Assembly Software Engineering Immersive course and represented my first forays into utilising **JavaScript**.
+
+Play _Snake Raiders_ [here](https://sclemson.github.io/Snake-Raiders/)
 
 
 ## First Steps

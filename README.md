@@ -37,6 +37,24 @@ The final pieces of game functionality were the scoring and lives systems. In or
 ## Day 7
 From the outset, I had known exactly what I wanted my game to look like. Across the breadth of the project, I had spent downtime in the evenings getting sprites, gifs, and backdrops ready so that I would be able to ‘slot’ these in at the end of the week. I used multiple tools to create these, utilising **Adobe Photoshop** in particular to generate 8-bit graphics, and Indiana Jones imagery. The look of the game came together relatively quickly as a result of this work and my key job on the final day became the ‘win’ screen that appeared, awarding Indy the idol. I built this by creating a separate class (called **winScreen**) which was the same size as the game grid, but only appeared once all of the snakes had been killed. The end result of the game screen and win screen looked like this:
 
+![Game Screen](https://github.com/sclemson/Snake-Raiders/blob/main/Images/Game%20Screen.png) ![Win Screen](https://github.com/sclemson/Snake-Raiders/blob/main/Images/Win%20Screen.png)
+
+Finally, I decided to add audio to try and inject a sense of humour into the game, incorporating the _Indiana Jones_ theme into the win screen and Indy’s famous ‘Snakes, why did it have to be snakes?’ quote into the start of the game.
+
+## Featured Code
+One of the key pieces of code I worked on over the course of the week was the **snakeAttack** function which encapsulates many of the key ideas that I have focussed on above. I chose to highlight this code in particular as, in many ways, this was the most complex piece of code in Snake Raiders as it incorporated the adding and removing of classes as well as the use of **Math** and **setInterval** to manipulate the difficulty of the game.
+
+![snakeAttack](https://github.com/sclemson/Snake-Raiders/blob/main/Images/snakeAttack.png)
+
+## Wins and Wishes
+The biggest wins across the project for me were both my increased understanding of JavaScript and the confidence boost I got when the final design of _Snake Raiders_ came together. The look of the game was really consistent and I was very happy with the aesthetics.
+
+With more time, I would have incorporated levels to the game, potentially changing the enemies that Indy faced as he progressed through the game. In addition, I would also have developed the ‘new game’ function so that, rather than this button refreshing the page, it reset the game completely instead.
+
+## Key Takeaways
+I was pleased with the project overall and delighted to go past my MVP and create something that looked so much like my initial sketch. My key takeaway from the project was to spend even longer planning and on pseudocode than I did - this ultimately, would have made the coding process much more efficient in the long run.
+
+
 
 
 

@@ -3,8 +3,14 @@
 ## Project Overview
 Snake Raiders was designed as a twist on an old classic. The grid-based game was my first project on the General Assembly Software Engineering Immersive course and represented my first forays into utilising **JavaScript**.
 
-Play _Snake Raiders_ [here](https://sclemson.github.io/Snake-Raiders/)
+Play _Snake Raiders_ [here](https://sclemson.github.io/Snake-Raiders/).
 
+## The Brief
+Our brief was to create a grid-based game using only **JavaScript**, **CSS**, and **HTML**.
+
+For the _Space Invaders_ brief specifically, the requirements stated that:
+- The player should be able to clear at least one wave of aliens
+- The player's score should be displayed at the end of the game
 
 ## First Steps
 

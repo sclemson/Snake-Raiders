@@ -5,11 +5,11 @@
 ## Project Overview
 _Snake Raiders_ was designed as a twist on an old classic. The grid-based game was my first project on the General Assembly Software Engineering Immersive course and represented my first forays into utilising **JavaScript**.
 
-**DURATION:** 7 Days
+**DURATION:** 7 Days.
 
-**TECHNOLOGIES USED:** HTML, CSS, JavaScript
+**TECHNOLOGIES USED:** HTML, CSS, JavaScript.
 
-**LINK:** Play _Snake Raiders_ [here](https://sclemson.github.io/Snake-Raiders/)
+**LINK:** Play _Snake Raiders_ [here](https://sclemson.github.io/Snake-Raiders/).
 
 ## The Brief
 Our brief was to create a grid-based game using only **JavaScript**, **CSS**, and **HTML**.

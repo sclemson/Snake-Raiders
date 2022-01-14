@@ -1,4 +1,6 @@
-# Snake Raiders
+<p float="left">
+  <img src="https://github.com/sclemson/Snake-Raiders/blob/main/Images/SnakeRaiders.png" width="40%" />
+</p>
 
 ## Project Overview
 _Snake Raiders_ was designed as a twist on an old classic. The grid-based game was my first project on the General Assembly Software Engineering Immersive course and represented my first forays into utilising **JavaScript**.
